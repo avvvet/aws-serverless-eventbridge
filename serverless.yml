@@ -11,25 +11,30 @@ provider:
         - Effect: Allow
           Action:
             - events:PutEvents
+            - es:ESHttpPost
+            - es:ESHttpPut
+            - es:ESHttpHead
+            - es:ESHttpDelete
           Resource: '*'
 functions:
-  create:
-    handler: handler.create
+  indexdata:
+    handler: IndexData.indexdata
     description: 'creat event from http'
     events: 
-      - http:
-          path: users
-          method: post
-      - eventBridge:
-          eventBus: service-bus
-          pattern:
-            detail-type:
-              - NEW-USER
-            source:
-              - USER-SERVICE
-          targets:
-            - arn:aws:lambda:us-east-1:587053838892:function:aws-serverless-eventbridge-sandbox-receive
-  receive:
-    handler: ReceiveEvent.receive
-    description: 'reveive'
-    
+    - stream:
+        type: dynamodb
+        arn:
+          Fn::GetAtt: [ DataTable, StreamArn ]
+        startingPosition: LATEST
+        bisectBatchOnFunctionError: true
+        maximumRetryAttempts: 2
+        parallelizationFactor: 1
+        batchSize: 100
+        destinations:
+          onFailure:
+            type: sqs
+            arn:
+              Fn::GetAtt: [ DLQueueDynamoDBStream, Arn ]
+resources:
+  - ${file(./resources/dynamodb/tables.yml)}
+  - ${file(./resources/sqs/queues.yml)}

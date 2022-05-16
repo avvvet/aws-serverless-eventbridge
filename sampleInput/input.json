@@ -1,3 +1,211 @@
 {
-    "yellow": "yellow"
-}
+    "Records": [
+      {
+        "eventID": "059450518cbf8f38b6a2799f26b51f8d",
+        "eventName": "INSERT",
+        "eventVersion": "1.1",
+        "eventSource": "aws:dynamodb",
+        "awsRegion": "us-east-1",
+        "dynamodb": {
+          "ApproximateCreationDateTime": 1651240374,
+          "Keys": {
+            "sk": {
+              "S": "userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "pk": {
+              "S": "CONTACT#id=bb31b885-5402-4551-b3ec-021baad212df"
+            }
+          },
+          "NewImage": {
+            "lastName": {
+              "S": "Mark"
+            },
+            "userId": {
+              "S": "0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "createdAt": {
+              "S": "2022-04-29T13:52:52.845Z"
+            },
+            "firstName": {
+              "S": "James"
+            },
+            "_context": {
+              "M": {
+                "awsRequestId": {
+                  "S": "f778f0f9-8c85-44d2-a3a5-acf56b7e774a"
+                },
+                "x-debug": {
+                  "S": "true"
+                },
+                "x-correlation-id": {
+                  "S": "f778f0f9-8c85-44d2-a3a5-acf56b7e774a"
+                },
+                "call-chain-length": {
+                  "N": "1"
+                }
+              }
+            },
+            "pk1": {
+              "S": "CONTACT#userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "sk": {
+              "S": "userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "sk1": {
+              "S": "isFavorite=false#id=bb31b885-5402-4551-b3ec-021baad212df"
+            },
+            "id": {
+              "S": "bb31b885-5402-4551-b3ec-021baad212df"
+            },
+            "pk": {
+              "S": "CONTACT#id=bb31b885-5402-4551-b3ec-021baad212df"
+            },
+            "_version": {
+              "N": "1"
+            },
+            "isFavorite": {
+              "BOOL": false
+            },
+            "updatedAt": {
+              "S": "2022-04-29T13:52:52.845Z"
+            }
+          },
+          "SequenceNumber": "42364900000000003784434678",
+          "SizeBytes": 639,
+          "StreamViewType": "NEW_AND_OLD_IMAGES"
+        },
+        "eventSourceARN": "arn:aws:dynamodb:us-east-1:020930497257:table/primelab-contacts-data/stream/2022-04-20T14:24:14.513"
+      },
+      {
+        "eventID": "f3c83471efa9abc8973059c3e908a3c8",
+        "eventName": "MODIFY",
+        "eventVersion": "1.1",
+        "eventSource": "aws:dynamodb",
+        "awsRegion": "us-east-1",
+        "dynamodb": {
+          "ApproximateCreationDateTime": 1651474213,
+          "Keys": {
+            "sk": {
+              "S": "userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "pk": {
+              "S": "CONTACT#id=cc31b885-5402-4551-b3ec-021baad212df"
+            }
+          },
+          "NewImage": {
+            "lastName": {
+              "S": "Mark"
+            },
+            "userId": {
+              "S": "0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "createdAt": {
+              "S": "2022-04-30T13:52:52.845Z"
+            },
+            "firstName": {
+              "S": "Zoo"
+            },
+            "_context": {
+              "M": {
+                "awsRequestId": {
+                  "S": "7cfab2f2-6984-429c-87f8-70ccce516fc6"
+                },
+                "x-debug": {
+                  "S": "true"
+                },
+                "call-chain-length": {
+                  "N": "1"
+                },
+                "x-correlation-id": {
+                  "S": "9637b568-07bf-449e-80d9-da51ec7b468b"
+                }
+              }
+            },
+            "pk1": {
+              "S": "CONTACT#userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "sk": {
+              "S": "userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "sk1": {
+              "S": "isFavorite=false#id=cc31b885-5402-4551-b3ec-021baad212df"
+            },
+            "id": {
+              "S": "cc31b885-5402-4551-b3ec-021baad212df"
+            },
+            "pk": {
+              "S": "CONTACT#id=cc31b885-5402-4551-b3ec-021baad212df"
+            },
+            "_version": {
+              "N": "4"
+            },
+            "isFavorite": {
+              "BOOL": false
+            },
+            "updatedAt": {
+              "S": "2022-04-30T18:15:03.562Z"
+            }
+          },
+          "OldImage": {
+            "lastName": {
+              "S": "Mark"
+            },
+            "userId": {
+              "S": "0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "createdAt": {
+              "S": "2022-04-29T13:52:52.845Z"
+            },
+            "firstName": {
+              "S": "Zoo"
+            },
+            "_context": {
+              "M": {
+                "awsRequestId": {
+                  "S": "7cfab2f2-6984-429c-87f8-70ccce516fc6"
+                },
+                "x-debug": {
+                  "S": "true"
+                },
+                "call-chain-length": {
+                  "N": "1"
+                },
+                "x-correlation-id": {
+                  "S": "9637b568-07bf-449e-80d9-da51ec7b468b"
+                }
+              }
+            },
+            "pk1": {
+              "S": "CONTACT#userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "sk": {
+              "S": "userId=0cf7449f-f720-4254-ad90-8d9ed46e7d7e"
+            },
+            "sk1": {
+              "S": "isFavorite=false#id=cc31b885-5402-4551-b3ec-021baad212df"
+            },
+            "id": {
+              "S": "cc31b885-5402-4551-b3ec-021baad212df"
+            },
+            "pk": {
+              "S": "CONTACT#id=cc31b885-5402-4551-b3ec-021baad212df"
+            },
+            "_version": {
+              "N": "4"
+            },
+            "isFavorite": {
+              "BOOL": false
+            },
+            "updatedAt": {
+              "S": "2022-04-29T18:15:03.562Z"
+            }
+          },
+          "SequenceNumber": "55088500000000033389892076",
+          "SizeBytes": 1180,
+          "StreamViewType": "NEW_AND_OLD_IMAGES"
+        },
+        "eventSourceARN": "arn:aws:dynamodb:us-east-1:020930497257:table/primelab-contacts-data/stream/2022-04-20T14:24:14.513"
+      }
+    ]
+  }
+  

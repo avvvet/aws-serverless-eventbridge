@@ -1,0 +1,36 @@
+service: aws-serverless-eventbridge
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - events:PutEvents
+          Resource: '*'
+functions:
+  create:
+    handler: handler.create
+    description: 'creat event from http'
+    events: 
+      - http:
+          path: users
+          method: post
+      - eventBridge:
+          eventBus: service-bus
+          pattern:
+            detail-type:
+              - NEW-USER
+            source:
+              - USER-SERVICE
+  receive:
+    handler: ReceiveEvent.receive
+    description: 'reveive'
+  indexdata:
+    handler: IndexData.indexdata
+    description: 'reveive'
+    

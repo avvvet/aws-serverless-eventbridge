@@ -1,0 +1,5 @@
+Resources:
+  DLQueueDynamoDBStream:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: bashanka-DynamoDB-Stream-DLQ
